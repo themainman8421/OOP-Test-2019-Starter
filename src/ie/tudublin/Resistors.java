@@ -7,6 +7,10 @@ public class Resistors
     private float y;
     private float width;
     private float height;
+    public int value;
+    public int ones;
+    public int tens;
+    public int hundreds;
 
     public Resistors (UI ui, float x, float y, float width, float height)
     {
