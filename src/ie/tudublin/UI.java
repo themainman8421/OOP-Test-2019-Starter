@@ -60,12 +60,12 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
-		resistor = new Resistors(this, 50, 50, 50, 50);
+		resistor = new Resistors(this, 175, 100, width/4, 100, 0, 0);
 	}
 	
 	public void draw()
 	{	
-		//resistor.draw();
+		resistor.draw();
 		for(int i = 0 ; i < colours.size() ; i ++)
 		{
 			System.out.println(colours.get(i));
