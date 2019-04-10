@@ -12,6 +12,7 @@ public class UI extends PApplet
 
 {	
 	Resistors resistor;
+	Colour colourJava;
 
 	ArrayList <Colour> colours = new ArrayList<Colour>();
 	ArrayList <Resistors> resistors = new ArrayList<Resistors>();
@@ -61,6 +62,7 @@ public class UI extends PApplet
 	public void setup() 
 	{
 		resistor = new Resistors(this, 175, 100, width/4, 100, 0, 0);
+		
 	}
 	
 	public void draw()
