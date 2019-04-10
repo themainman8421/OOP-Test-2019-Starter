@@ -27,11 +27,23 @@ public class Resistors
 
 	public void draw()
     {
-        ui.fill(123);
-      ui.rect(x, y, width, height);
-      ui.rect(x, y + 50, width, height);
-      ui.rect(x, y + 100, width, height);
-      ui.rect(x, y + 200, width, height);
+        //ui.fill(123);
+        ui.rect(x, y, width, height);
+        ui.rect(x, y + 50, width, height);
+        ui.rect(x, y + 100, width, height);
+        ui.rect(x, y + 200, width, height);
+
+        int hundreds = (value / 100);
+        int tens = (value - (hundreds * 100)) / 10;
+        int ones = value - ((hundreds * 100)  + (tens * 10));
+        System.out.println(hundreds + ",");
+        System.out.println(tens + ",");
+        System.out.println(ones);
+    }
+
+    public void update()
+    {
+        
     }
 
     /**
