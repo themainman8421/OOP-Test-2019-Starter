@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import processing.data.TableRow;
+
 public class Resistors
 {
     UI ui;
@@ -20,7 +22,10 @@ public class Resistors
         this.width = width;
     }
 
-    public void draw()
+    public Resistors(TableRow tr) {
+	}
+
+	public void draw()
     {
         ui.fill(123);
       ui.rect(x, y, width, height);
