@@ -18,6 +18,7 @@ public class Resistors
 
     public void draw()
     {
+        ui.fill(123);
       ui.rect(x, y, width, height);
       ui.rect(x, y + 50, width, height);
       ui.rect(x, y + 100, width, height);

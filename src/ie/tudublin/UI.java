@@ -13,6 +13,8 @@ public class UI extends PApplet
 {	
 	Resistors resistors;
 
+	ArrayList <Colour> colours = new ArrayList<Colour>();
+
 	public void separate(int value)
 	{
 		int hundreds = (value / 100);
@@ -23,6 +25,17 @@ public class UI extends PApplet
 		println(ones);
 	}
 
+	void loadColours()
+    {
+        Table table = loadTable("colours.csv", "header");
+        for(TableRow tr:table.rows())
+        {
+            Colour c = new Colour(tr);
+            colours.add(c);
+        }        
+    }
+
+
 	public void settings()
 	{
 		size(500, 800);
@@ -30,11 +43,12 @@ public class UI extends PApplet
 		separate(381);
 		separate(1);
 		separate(92);
+		loadColours();
 	}
 
 	public void setup() 
 	{
-		resistors = new Resistors(this,50, 50, 50, 50);
+		resistors = new Resistors(this, 50, 50, 50, 50);
 	}
 	
 	public void draw()
