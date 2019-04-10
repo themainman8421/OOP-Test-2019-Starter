@@ -8,7 +8,12 @@ import processing.data.TableRow;
 
 public class UI extends PApplet
 
-{	public void separate(int value)
+
+
+{	
+	Resistors resistors;
+
+	public void separate(int value)
 	{
 		int hundreds = (value / 100);
 		int tens = (value - (hundreds * 100)) / 10;
@@ -29,9 +34,11 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
+		resistors = new Resistors(this,50, 50, 50, 50);
 	}
 	
 	public void draw()
-	{			
+	{	
+		resistors.draw();		
 	}
 }
